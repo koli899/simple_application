@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* Basic CSS Styling */
+
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightgray;
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2, h3 {
+            color: darkslategray;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        /* Header styling */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: black;
+            color: white;
+        }
+
+        /* About section */
+        .about, .skills, .projects, .contact {
+            padding: 20px;
+            margin-bottom: 10px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .about img {
+            max-width: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 10px auto;
+        }
+
+        /* Skills section */
+        .skills ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skills ul li {
+            padding: 5px;
+            background-color: lightgray;
+            margin: 5px 0;
+            text-align: center;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .skills ul li:hover {
+            background-color: gray;
+            color: white;
+        }
+
+        /* Projects section */
+        .projects .project {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid silver;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+        .projects .project:hover {
+            background-color: gainsboro;
+        }
+
+        /* Contact section */
+        .contact-info {
+            display: none;
+            margin-top: 10px;
+        }
+        .show-contact-btn {
+            padding: 10px;
+            border: none;
+            background-color: black;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .show-contact-btn:hover {
+            background-color: dimgray;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Tushar Koli</h1>
+        <p>Web Developer</p>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- About Section -->
+        <section class="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm a passionate web developer with a knack for creating clean and responsive websites.</p>
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQmcqzN9KSMx-hxPJfiB3yt59uQhN9R4IqjisfUEitJv9lbQVN14QYLsUfmgiH-AoH2VgTFMdRBaTWa9XXpU9aMV1fveYnRgRsf4peaqt_rCR_qyQ483NgjHHdhfYpOr8axyGWhk3DHw5lAUQkXl6NGMugPS7k6Apw7CUjqRMgwAv01i2_AXyRumuBfw/s458/blank-profile-picture-hd-images-photo.JPG" alt="Profile Picture">
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Problem Solving</li>
+                <li>Responsive Design</li>
+            </ul>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <div>
+                    <h3>Portfolio</h3>
+                    <p>My personal website thats shows my details and qualification</p>
+                    <a href="#" target="_blank">View Demo</a>
+                </div>
+            </div>
+            <div class="project">
+                <div>
+                    <h3>Calculator</h3>
+                    <p>A Scientific Calculator</p>
+                    <a href="#" target="_blank">View Demo</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact">
+            <h2>Contact Information</h2>
+            <button class="show-contact-btn" onclick="showContactInfo()">Show Contact Info</button>
+            <div class="contact-info">
+                <p>Email: example@example.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JavaScript for interactivity -->
+    <script>
+        function showContactInfo() {
+            const contactInfo = document.querySelector('.contact-info');
+            contactInfo.style.display = contactInfo.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
